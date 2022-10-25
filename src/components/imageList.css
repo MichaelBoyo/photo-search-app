@@ -1,0 +1,12 @@
+.images{
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5%;
+}
+.img{
+    width:200px;
+    height:200px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
