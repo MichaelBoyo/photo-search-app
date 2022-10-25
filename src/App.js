@@ -21,7 +21,6 @@ function App() {
   useEffect(() => {
     const fetchPhotos = async () => {
       const result = await unsplash.get(`/search/photos?query=${search}&per_page=34&page=${page}`);
-      console.log(result);
       setImages(result.data.results);
       setPages(result.data.total_pages)
     };
