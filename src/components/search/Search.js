@@ -3,16 +3,17 @@ import styles from "./search.module.css";
 const Search = ({ getSearchTerm }) => {
   const [search, setSearch] = React.useState("");
   const inputRef = React.useRef();
-  React.useEffect(() => {
-    inputRef.current.focus();
-  },[]);
   const submit = (e) => {
     e.preventDefault();
+    
     if (search.trim() !== "") {
       getSearchTerm(search);
     }
     setSearch("");
   };
+  React.useEffect(() => {
+    inputRef.current.focus();
+  },[])
 
   return (
     <form className={styles.search} onSubmit={submit}>
